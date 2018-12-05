@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+    android:id="@+id/edt_nombre"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Ingresar nombre"
+    />
+    <EditText
+        android:id="@+id/edt_apellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresar apellido"
+        />
+    <EditText
+        android:id="@+id/edt_edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:inputType="number"
+        />
+    <EditText
+        android:id="@+id/edt_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pass"
+        android:inputType="textPassword"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Login"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/btn_compartir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Compartir"
+        android:visibility="invisible"
+        android:onClick="Compartir"
+        />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_mostrarnombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/txt_mostrarapellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/txt_mostraredad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/txt_mostrarpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/btn_tomarfoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tomar Foto"
+        android:onClick="cambiarActivity"
+        />
+
+</LinearLayout>
+
+    <!-- ACÁ ACLARO UN PAR DE COSAS
+    android:id sirve para asignar un id al objeto, esto sirve para poder referenciarlo cuando le asignemos lógica en java
+
+    android:hint Esto sirve para mostrar un texto en los cuadros de textos. Si lo prueban seguro entienden cual es su función
+
+    android:inputType sirve para definir qué tipo de teclado quieren que aparezca, en el caso de edad, por ejemplo
+    van a ver que aparece un teclado que sólo tiene números. Tambien puede servir para dar el típico efecto de un cuadro de texto para password
+
+    android:visibility determina si el elemnto está o no visible en la interfaz
+    Fijense que en el caso de los botones, creo otro LinearLayout con orientation en horizontal para poder poner los botones uno al lado del otro
+    -->
+
